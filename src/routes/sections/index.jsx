@@ -4,6 +4,7 @@ import { CONFIG } from 'src/config-global';
 
 import { authRoutes } from './auth';
 import { mainRoutes } from './main';
+import { machineRoutes } from './machine';
 import { dashboardRoutes } from './dashboard';
 
 // ----------------------------------------------------------------------
@@ -20,6 +21,9 @@ export function Router() {
 
     // Dashboard
     ...dashboardRoutes,
+
+    // Machine
+    ...machineRoutes, // 2. Adicione as novas rotas aqui
 
     // Main
     ...mainRoutes,

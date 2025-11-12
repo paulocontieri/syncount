@@ -3,6 +3,7 @@
 const ROOTS = {
   AUTH: '/auth',
   DASHBOARD: '/dashboard',
+  MACHINE: '/machine',
 };
 
 // ----------------------------------------------------------------------
@@ -50,5 +51,11 @@ export const paths = {
       five: `${ROOTS.DASHBOARD}/group/five`,
       six: `${ROOTS.DASHBOARD}/group/six`,
     },
+  },
+
+  // MACHINE
+  machine: {
+    root: ROOTS.MACHINE,
+    analytics: `${ROOTS.MACHINE}/overview`,
   },
 };
