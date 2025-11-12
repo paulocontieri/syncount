@@ -47,7 +47,7 @@ const layoutContent = (
 // ----------------------------------------------------------------------
 export const machineRoutes = [
   {
-    path: 'machine', // rota base: /machine
+    path: 'maquinas', // rota base: /maquinas
     element: CONFIG.auth.skip ? (
       <>{layoutContent}</> // se auth.skip = true, não exige login
     ) : (

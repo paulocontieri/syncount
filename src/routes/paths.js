@@ -10,7 +10,8 @@
 const ROOTS = {
   AUTH: '/auth', // Rotas relacionadas à autenticação
   DASHBOARD: '/dashboard', // Rotas do dashboard principal
-  MACHINE: '/machine', // Rotas do módulo de Máquinas
+  MACHINE: '/maquinas', // Rotas do módulo de Máquinas
+  FINANCE: '/financeiro', // Rotas do módulo Financeiro
 };
 
 // ----------------------------------------------------------------------
@@ -74,5 +75,19 @@ export const paths = {
   machine: {
     root: ROOTS.MACHINE, // rota base /machine
     analytics: `${ROOTS.MACHINE}/overview`, // página principal /machine/overview
+  },
+
+  finance: {
+    root: ROOTS.FINANCE,
+    payables: `${ROOTS.FINANCE}/contas-a-pagar`,
+    receivables: `${ROOTS.FINANCE}/contas-a-receber`,
+    categories: `${ROOTS.FINANCE}/categorias`,
+    paymentMethods: `${ROOTS.FINANCE}/formas-de-pagamento`,
+    accounts: `${ROOTS.FINANCE}/contas-financeiras`,
+    reports: {
+      expenses: `${ROOTS.FINANCE}/relatorios/despesas`,
+      revenue: `${ROOTS.FINANCE}/relatorios/receitas`,
+      cashflow: `${ROOTS.FINANCE}/relatorios/fluxo-de-caixa`,
+    },
   },
 };

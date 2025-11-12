@@ -30,12 +30,12 @@ const ICONS = {
 // ----------------------------------------------------------------------
 export const navData = [
   {
-    subheader: 'Machine', // nome da seção no menu lateral
+    subheader: 'Gestão de Maquinário',
     items: [
       {
-        title: 'Overview', // nome do item no menu
-        path: paths.machine.root, // caminho definido em paths.js
-        icon: ICONS.dashboard, // ícone associado
+        title: 'Visão Geral',
+        path: paths.machine.root, // ✅ /maquinas
+        icon: ICONS.dashboard,
       },
     ],
   },
