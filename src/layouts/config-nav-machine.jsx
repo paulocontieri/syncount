@@ -1,28 +1,41 @@
-import { paths } from 'src/routes/paths'; // Você precisará adicionar os caminhos de 'machine' em paths.js
+// ======================================================================
+// 📁 ARQUIVO: src/layouts/config-nav-machine.jsx
+// 🔹 Função: Define o menu lateral (sidebar) exclusivo do módulo Machine
+// 🔹 Cada módulo pode ter seu próprio "navData"
+// ======================================================================
+
+import { paths } from 'src/routes/paths'; // Caminhos nomeados globais
 import { CONFIG } from 'src/config-global';
 
 import { SvgColor } from 'src/components/svg-color';
 
-// Reutilize os ícones ou crie novos
+// ----------------------------------------------------------------------
+// 🔸 Helper para facilitar a definição de ícones do menu
+//     - Usa o mesmo padrão do layout principal
+// ----------------------------------------------------------------------
 const icon = (name) => <SvgColor src={`${CONFIG.site.basePath}/assets/icons/navbar/${name}.svg`} />;
 
+// ----------------------------------------------------------------------
+// 🔸 Dicionário de ícones usados neste módulo
+//     - Facilita reaproveitamento e manutenção
+// ----------------------------------------------------------------------
 const ICONS = {
   dashboard: icon('ic-dashboard'),
 };
 
 // ----------------------------------------------------------------------
-
+// 🔸 Estrutura de navegação (menu lateral) do módulo Machine
+//     - "subheader" define o título da seção
+//     - "items" contém as opções de menu
+// ----------------------------------------------------------------------
 export const navData = [
-  /**
-   * Machine Overview
-   */
   {
-    subheader: 'Machine',
+    subheader: 'Machine', // nome da seção no menu lateral
     items: [
       {
-        title: 'Overview',
-        path: paths.machine.root,
-        icon: ICONS.dashboard,
+        title: 'Overview', // nome do item no menu
+        path: paths.machine.root, // caminho definido em paths.js
+        icon: ICONS.dashboard, // ícone associado
       },
     ],
   },

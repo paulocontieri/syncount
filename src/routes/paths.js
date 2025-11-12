@@ -1,17 +1,29 @@
-// ----------------------------------------------------------------------
+// ======================================================================
+// 📁 ARQUIVO: src/routes/paths.js
+// 🔹 Função: Centraliza todas as rotas nomeadas da aplicação
+// 🔹 Benefício: evita "strings soltas" e facilita o versionamento/expansão
+// ======================================================================
 
+// ----------------------------------------------------------------------
+// 🔸 Definição das rotas raiz (root paths) de cada módulo principal
+// ----------------------------------------------------------------------
 const ROOTS = {
-  AUTH: '/auth',
-  DASHBOARD: '/dashboard',
-  MACHINE: '/machine',
+  AUTH: '/auth', // Rotas relacionadas à autenticação
+  DASHBOARD: '/dashboard', // Rotas do dashboard principal
+  MACHINE: '/machine', // Rotas do módulo de Máquinas
 };
 
 // ----------------------------------------------------------------------
-
+// 🔸 Objeto "paths" exportado globalmente para uso em todo o sistema
+// ----------------------------------------------------------------------
 export const paths = {
+  // Rotas genéricas do sistema
   faqs: '/faqs',
   minimalStore: 'https://mui.com/store/items/minimal-dashboard/',
-  // AUTH
+
+  // =============================================================
+  // 🔹 ROTAS DE AUTENTICAÇÃO
+  // =============================================================
   auth: {
     amplify: {
       signIn: `${ROOTS.AUTH}/amplify/sign-in`,
@@ -41,7 +53,10 @@ export const paths = {
       resetPassword: `${ROOTS.AUTH}/supabase/reset-password`,
     },
   },
-  // DASHBOARD
+
+  // =============================================================
+  // 🔹 ROTAS DO DASHBOARD PRINCIPAL
+  // =============================================================
   dashboard: {
     root: ROOTS.DASHBOARD,
     two: `${ROOTS.DASHBOARD}/two`,
@@ -53,9 +68,11 @@ export const paths = {
     },
   },
 
-  // MACHINE
+  // =============================================================
+  // 🔹 ROTAS DO MÓDULO MACHINE
+  // =============================================================
   machine: {
-    root: ROOTS.MACHINE,
-    analytics: `${ROOTS.MACHINE}/overview`,
+    root: ROOTS.MACHINE, // rota base /machine
+    analytics: `${ROOTS.MACHINE}/overview`, // página principal /machine/overview
   },
 };
